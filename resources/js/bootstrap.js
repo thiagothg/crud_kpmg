@@ -10,19 +10,17 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
+//token
+window.token = document.head.querySelector('meta[name="csrf-token"]')
 
-// import Echo from 'laravel-echo';
+//bootstrap
+window.bootstrap = require('bootstrap')
 
-// window.Pusher = require('pusher-js');
+//jquery
+const $ = require('jquery')
+window.$ = $
+window.jQuery = $
 
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     forceTLS: true
-// });
+//bootbox
+window.bootbox = require('bootbox')
+
