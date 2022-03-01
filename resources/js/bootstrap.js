@@ -13,13 +13,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //token
 window.token = document.head.querySelector('meta[name="csrf-token"]')
 
-//bootstrap
-window.bootstrap = require('bootstrap')
-
 //jquery
 const $ = require('jquery')
 window.$ = $
 window.jQuery = $
+
+//popper
+window.popperjs = require('@popperjs/core')
+
+//bootstrap
+const bootstrap = require('bootstrap')
+window.bootstrap = bootstrap
+require('../../node_modules/bootstrap/dist/js/bootstrap.min')
+
 
 //bootbox
 window.bootbox = require('bootbox')

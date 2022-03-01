@@ -14,9 +14,18 @@ let productionSourceMaps = false;
 
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]).sourceMaps(productionSourceMaps, 'source-map');;
+    ]).sourceMaps(productionSourceMaps, 'source-map');
 
 mix.sass('resources/sass/app.scss', 'public/css');
+mix.copy('lang/datatables_pt_br.json', 'public/');
 
-// mix.js('resources/js/studentjs', 'public/js');
+mix.autoload({
+    jquery: ['$', 'window.jQuery']
+});
+mix.options({
+    // Don't perform any css url rewriting by default
+    processCssUrls: true,
+})
+
+//js for all app
+mix.js('resources/js/script', 'public/js');
