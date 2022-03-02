@@ -9,11 +9,6 @@
 @endsection
 
 @section('content')
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
     <a href="{{ route('student.create') }}" class="btn btn-success btn-sm" title="@lang('labels.new_record')">
         <i class="fa fa-plus" aria-hidden="true"></i> @lang('labels.new_record')
     </a>

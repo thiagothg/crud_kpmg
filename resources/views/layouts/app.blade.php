@@ -23,6 +23,7 @@
         @include('layouts.header')
 
         <div class="container mb-4">
+            @include('components.flash-message')
             @yield('content')
         </div>
 
